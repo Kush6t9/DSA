@@ -3,8 +3,8 @@ public:
     vector<int> majorityElement(vector<int>& nums) {
         int cnt1=0;
         int cnt2=0;
-        int el1=INT_MIN;
-        int el2=INT_MIN;
+        int el1=0;
+        int el2=-1;
         for(int i=0;i<nums.size();i++){
             if(nums[i]==el1) cnt1++;
             else if(nums[i]==el2) cnt2++;

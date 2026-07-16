@@ -4,7 +4,7 @@ public:
         int cnt1=0;
         int cnt2=0;
         int el1=0;
-        int el2=-1;
+        int el2=0;
         for(int i=0;i<nums.size();i++){
             if(nums[i]==el1) cnt1++;
             else if(nums[i]==el2) cnt2++;
@@ -18,7 +18,7 @@ public:
         cnt1=0,cnt2=0;
         for(int i =0;i<nums.size();i++){
             if(nums[i]==el1) cnt1++;
-            if(nums[i]==el2) cnt2++;
+            else if(nums[i]==el2) cnt2++;
         }
         vector<int> ans;
         if(cnt1>nums.size()/3) ans.push_back(el1);

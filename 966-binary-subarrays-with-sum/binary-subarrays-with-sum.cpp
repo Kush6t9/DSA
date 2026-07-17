@@ -1,5 +1,9 @@
 class Solution {
 public:
+    int numSubarraysWithSum(vector<int>& nums, int goal) {
+        return Atmost(nums,goal) - Atmost(nums,goal-1);
+    }
+    private:
     int Atmost(vector<int> nums,int goal){
         if (goal<0) return 0;
         int i=0;
@@ -14,8 +18,5 @@ public:
             cnt+=j-i+1;
         }
         return cnt;
-    }
-    int numSubarraysWithSum(vector<int>& nums, int goal) {
-        return Atmost(nums,goal) - Atmost(nums,goal-1);
     }
 };

@@ -1,7 +1,7 @@
 class Solution {
 public:
     int Atmost(vector<int>& nums, int k){
-        map<int,int> hash;
+        unordered_map<int,int> hash;
         int i=0;
         int cnt=0;
         int x=0;

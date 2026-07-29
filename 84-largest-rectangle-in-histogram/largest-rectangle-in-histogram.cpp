@@ -7,9 +7,8 @@ public:
             while(!stk.empty() && (i==heights.size() || heights[stk.top()]>heights[i])){
                 int mid=stk.top();
                 stk.pop();
-                int l=stk.empty()? -1:stk.top();
-                int r=i;
-                int area=(r-l-1)*(heights[mid]);
+                int l=stk.empty()? i:i-stk.top()-1;
+                int area=l*(heights[mid]);
                 ans=max(ans,area);
             }
             stk.push(i);
